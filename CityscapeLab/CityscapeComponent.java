@@ -47,6 +47,7 @@ public class CityscapeComponent extends JComponent
         
         
         // request that the Java Runtime repaints this component by invoking its paintComponent method
+        //  do not explicitly invoke the paintComponent method
         repaint();
     }
 

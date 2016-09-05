@@ -24,13 +24,8 @@ public class CityscapeViewer
         frame.setTitle("Cityscape");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        // use the Scanner class to prompt the user for some configurable aspect of the cityscape
-        // ...
-        
-        
-        
         // a frame contains a single component; create the Cityscape component and add it to the frame
-        CityscapeComponent component = new CityscapeComponent( /* pass the user-specified value */ );
+        CityscapeComponent component = new CityscapeComponent();
         frame.add(component);
         
         // make the frame visible which will result in the paintComponent method being invoked on the
