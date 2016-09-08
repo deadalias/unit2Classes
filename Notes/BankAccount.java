@@ -21,24 +21,77 @@ public class BankAccount
      */
     private double balance;
 
+    /*
+     * Constructor:
+     *      responsible for initializing newly created objects
+     *      invoked automatically via the new operator
+     *      constructor name must match the class name
+     *      has no return type (not even void)
+     *      mutiple constructors may be defined for a class
+     *          one constructor may call another (with restrictions)
+     */
     /**
      * Constructor for objects of class BankAccount
      */
     public BankAccount()
     {
-        // initialise instance variables
-        x = 0;
+        this.balance = 0;
+    }
+    
+    /**
+     * Constructs a bank account with the specified balance
+     *
+     * @param  balance   the intitial balance of the bank account
+     */
+    public BankAccount( double balance )
+    {
+        /*
+         * Parameter and local variables can "shadow" instance variables.
+         *  That is, "balance" refers to the parameter variable and not
+         *  the instance variable.
+         *  
+         *  To expliticly refer to the instance variable, use "this"
+         *      "this" is not always required, but it's a good idea
+         */
+        this.balance /* refers to instance variable */ =
+                balance /* refers to parameter variable */;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+
+    /*
+     * Defining methods:
+     *      specify the visibility (e.g., public)
+     *      specify the return type (e.g., void)
+     *      specify the method's name (e.g., deposit)
+     *      specify the parameters and their types (e.g., amount of type double)
      */
-    public int sampleMethod(int y)
+    /**
+     * Deposits the specified amount of money into the bank account
+     * 
+     * @param  amount   the amount to deposit in the bank account
+     */
+    public void deposit( double amount )
     {
-        // put your code here
-        return x + y;
     }
+    
+    /**
+     * Returns the current balance of the bank account.
+     *
+     * @return     the current balance of the bank account
+     */
+    public double getBalance()
+    {
+        return 0;
+    }
+    
+    /**
+     * Withdraws the specified amount from the bank account
+     *
+     * @param  amount   the amount to withdraw from the bank account
+     */
+    public void withdraw( double amount )
+    {
+    }
+
+
 }
