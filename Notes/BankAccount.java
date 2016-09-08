@@ -24,12 +24,39 @@ public class BankAccount
 
     /**
      * Constructor for objects of class BankAccount
+     *      responsible for initializing objects
+     *      invoked automatically via the new operator
+     *      name must match the name of the class (e.g., BankAccount)
+     *      has no return type (not even void)
+     *      multiple constructors may be defined for a class
+     *      one constructor may invoke another (with restrictions)
+     *      
      */
     public BankAccount()
     {
-        // initialise instance variables
-        
+        // initialize instance variables
+        // scope instance variables by using the this keyword (usually not required)
+        this.balance = 0;
     }
+    
+    /**
+     * Constructor that specifies the intial balance for the bank account
+     *
+     * @param  balance   the initial balance for the bank account
+     */
+    public BankAccount( double balance )
+    {
+        /*
+         * Local variables and parameter variables (e.g., balance) "shadows"
+         *      instance variables. That is, the name refers to the local or
+         *      parameter variable and not the instance variable.
+         *      
+         * We have to use "this" if want to reference the instance variable.     
+         */
+        this.balance /* refers to instance variable */ =
+                balance /* refers to parameter */;
+    }
+
 
     /**
      * Deposits money into the bank account.
@@ -46,4 +73,27 @@ public class BankAccount
     {
         
     }
+    
+    /**
+     * Withdraws the specified amount of money from the bank account
+     *
+     * @param  amount   the amount to withdraw from the bank account
+     */
+    public void withdraw( double amount )
+    {
+    }
+
+    
+    /**
+     * Returns the current balance of the bank account
+     *
+     * @return     the current balance of the bank account
+     */
+    public double getBalance()
+    {
+        return 0;
+    }
+    
+    
+
 }
