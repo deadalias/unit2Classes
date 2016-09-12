@@ -55,6 +55,35 @@ public class CarTest
         assertEquals( 0, amount, 1e-6 /* 1 x 10^-6 */ );
     }
     
+    @Test
+    public void testAddGas()
+    {
+        Car testCar = new Car( 50 );
+        testCar.addGas( 20 );
+        double amount = testCar.getGasInTank();
+        assertEquals( 20, amount, 1e-6 );
+        
+        testCar.addGas( 5 );
+        amount = testCar.getGasInTank();
+        assertEquals( 25, amount, 1e-6 );
+    }
+    
+    @Test
+    public void testDrive()
+    {
+        Car testCar = new Car( 50 );
+        testCar.addGas( 20 );
+        testCar.drive( 25 );
+        double amount = testCar.getGasInTank();
+        assertEquals( 19.5, amount, 1e-6 );
+        
+        testCar.drive( 100 );
+        amount = testCar.getGasInTank();
+        assertEquals( 17.5, amount, 1e-6 );
+    }
+    
+    
+    
     
     
     
