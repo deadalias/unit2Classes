@@ -15,9 +15,10 @@ public class Car
      * 
      * @param   efficiency  the fuel efficiency, in miles per gallon, of this new car
      */
-    public Car( double fuelEfficiency )
+    public Car( double efficiency )
     {
-        fuelEfficiency = fuelEfficiency;
+        this.fuelEfficiency = efficiency;
+        this.fuelInTank = 0;
     }
 
     /**
@@ -27,7 +28,7 @@ public class Car
      */
     public void drive( double distance )
     {
-        this.fuelInTank = this.fuelInTank - ( distance / this.fuelEfficiency );
+        this.fuelInTank -= ( distance / this.fuelEfficiency );
     }
     
     /**
@@ -37,7 +38,7 @@ public class Car
      */
     public void addGas( double amount )
     {
-        this.fuelInTank = this.fuelInTank + amount; 
+        this.fuelInTank += amount; 
     }
     
     /**
@@ -51,5 +52,8 @@ public class Car
     }
 
 
+    
+    
+    
     
 }
