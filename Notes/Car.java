@@ -15,9 +15,10 @@ public class Car
      * 
      * @param   efficiency  the fuel efficiency, in miles per gallon, for this car
      */
-    public Car( double fuelEfficiency )
+    public Car( double efficiency )
     {
-        fuelEfficiency = fuelEfficiency;
+        this.fuelEfficiency = efficiency;
+        this.fuelInTank = 0;
     }
 
     /**
