@@ -60,6 +60,67 @@ public class AreaCalculator
         System.out.println( "dollars: " + dollars + " cents: " + cents );
     }
     
+    public static void conversionExample()
+    {
+        /*
+         * A conversion is when a data value if converted from one type to
+         *      another. Examples: int to long or int to double
+         *      
+         *      Widening: preserves information (e.g., int to double)
+         *      
+         *      Narrowing: may loose information (e.g., double to int)
+         *      
+         *  Java will automatically perform widening conversions as needed.
+         */
+        
+        // Assignment Conversion Example
+        int dollars = 25;
+        double money = dollars; // okay - converts an int to a double
+        //int dollars2 = money; // compile-time error - attempts to convert a double to an int
+        
+        /* Arithmetic Promotion Example
+         * 
+         * Whenever operand types don't match, Java attempts to promote one
+         *  type to the other.
+         *  
+         *  In this example, Java promote count, an int, to a double since this
+         *      is a widening conversion.
+         */
+        double sum = 25.2;
+        int count = 4;
+        double result = sum / count;
+        
+        /*
+         * This is not the same example.
+         * 
+         * Java evaluates the types of operands for each operation.
+         * 
+         * In this example, sun2 and count2 are both ints; so, no promotion
+         *      is needed; integer division is done. The result (6) is
+         *      promoted to a double (6.0) before assigning to result2.
+         */
+        int sum2 = 25;
+        int count2 = 4;
+        double result2 = sum2 / count2;
+        
+        /*
+         * A cast is the "I know what I'm doing; trust me" conversion.
+         * 
+         * (int) forces Java to a type conversion and acknowledges the potential
+         *  loss of data (e.g., 84 is assigned to wholeDollars)
+         */
+        double price = 84.69;
+        int wholeDollars = (int) price;
+        
+        /*
+         * If we want to round to the nearest integer rather than truncate,
+         *      use the Math.round method.
+         *  In this example, 84.69 is rounded to 85, which is assigned to
+         *      nearestDollar.
+         */
+        int nearestDollar = (int)( Math.round( price ));
+    }
+    
     
 }
 
