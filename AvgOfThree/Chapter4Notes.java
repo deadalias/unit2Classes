@@ -81,6 +81,43 @@ public class Chapter4Notes
         int dollars2 = 25;
         double money = dollars2;    // okay
         // dollars2 = money;        // compile-time error
+        
+        /*
+         * In this example, count is promoted to a double such that
+         *      floating point division can occur. This is an automatic
+         *      widing conversion.
+         * 
+         */
+        double sum = 25;
+        int count = 4;
+        double average = sum / count;
+        
+        /*
+         * This is a different example. Since sum2 and count2 are both ints,
+         *      no automatic widing conversion is needed and integer divison
+         *      is done. The result (i.e., 6) is promoted (automatic widing
+         *      conversion) to a double before being assigned to average2.
+         */
+        int sum2 = 25;
+        int count2 = 4;
+        double average2 = sum2 / count2;
+        
+        /*
+         * the cast operator (e.g., (int)) is the "I know what I'm doing;
+         *      trust me" operator.
+         *  In this example, 84 is assigned to wholeDollars
+         */
+        double cost = 84.69;
+        int wholeDollars = (int) cost;
+        
+        /*
+         * If we want to round a value to the nearest integer, use
+         *      the static method Math.round.
+         *  In this example, Math.round returns 85.0. We have to cast
+         *      the return value to an int such that 85 is assigned to
+         *      nearestDollar.
+         */
+        int nearestDollar = (int)( Math.round( cost ));
     }
     
 }
