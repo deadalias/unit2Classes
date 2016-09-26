@@ -64,6 +64,68 @@ public class Converter
         System.out.println( "Dollars: " + dollars + ", Cents: " + cents );
     }
     
+    public static void conversionExample()
+    {
+        /*
+         * A conversion is when a data value is converted from one type
+         *      to another (e.g., int to double, double to int, int to long)
+         *  
+         *  Widening: preserves information (e.g,. int to double, int to long)
+         *  Narrowing: may loose information (e.g., double to int)
+         */
+        int dollars = 25;
+        double money = dollars; // okay; widening conversion
+        //dollars = money; // compile-time error; narrowing conversion
+        
+        /*
+         * Arthimetic Promotion Example.
+         * 
+         * If the two operands are of different types, Java attempts to
+         *      promote one of the types (widening conversion) and then
+         *      perform the operation.
+         *      
+         *  In this example, 4 is promoted to a double (4.0) and then
+         *      floating-point divsiion is performed resulting in (4.25),
+         *      which is assigned to average.
+         */
+        double miles = 17.0;
+        int days = 4;
+        double average = miles / days;
+        
+        /*
+         * This is a different example.
+         * 
+         * In this case, both miles2 and days2 are ints, so Java doesn't
+         *      perform any promotion and performs integer division. The
+         *      result (4) is promoted to a double (4.0) and then assigned
+         *      to average2.
+         */
+        int miles2 = 17;
+        int days2 = 4;
+        double average2 = miles2 / days2;
+        
+        /*
+         * A cast is the "I know what I'm doing; trust me" conversion.
+         * 
+         * A cast can perform a narrowing conversion because we are explicitly
+         *      doing so.
+         *  
+         *  (int) truncates 84.69 to an int (84)
+         */
+        double price = 84.69;
+        int wholeDollars = (int) price;
+        
+        /*
+         * If we want to round a double to the nearest int value, use the
+         *      Math.round static method.
+         *      
+         *  converts 84.69 to 85.0
+         */
+        int nearestDollar = (int)( Math.round( price ));
+    }
+    
+    
+    
 }
 
 
