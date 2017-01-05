@@ -10,9 +10,9 @@ Requirements
 	class, and other classes) that displays a cityscape.
 * Design at least three classes for elements of the cityscape (e.g.,
 	building, window, sun, moon, car, tree)
-* demonstrate good class design (encapsulation)
-* provide configurability through constructors and instance variables
-	(size, color, etc.)
+	* demonstrate good class design (encapsulation)
+	* provide configurability through constructors and instance variables
+		(size, color, etc.)
 * Create multiple instances of at least one class with different
 	properties and display in the cityscape.
 * Animate at least one object in the cityscape. The animation must be
@@ -21,6 +21,9 @@ Requirements
 	to the paintComponent method.
 * Document the class using JavaDoc comments as demonstrated in our
 	code template.
+	
+In this folder is a design class diagram to illustrate the relationship
+	among the classes in this project.
 
 Extensions
 
@@ -30,4 +33,4 @@ Extensions
 
 Submission
 
-Submit a link to your GitHub repository for this assignment in Canvas.
+* Submit a link to your GitHub repository for this assignment in Canvas.
